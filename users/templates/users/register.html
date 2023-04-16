@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" href = "{% static 'styles.css' %}">
+</head>
+
+<body>
+
+<h1><center><u>Freedom International School</u></center></h1>
+<center><div class = "main">
+  <p><u>Login</u></p>
+  <div>
+    <form method = "POST">
+        {% csrf_token %}
+        <center><label for "name">Name:</label>
+        <br><br>
+        {{form.name}}
+        <br><br><br>
+        <label for "ID">ID:</label>
+        <br><br>
+        {{form.ID}}
+        <br><br><br>
+        <button type = "submit">
+            Sign Up
+        </button></center>
+    </form>
+  </div>
+</div></center>
+
+</body>
+
+</html>
+
